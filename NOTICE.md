@@ -8,7 +8,8 @@ This repository is published publicly as a free reference for learning and apply
 
 **1. Original work (MIT license)**
 
-- `README.md`, `NOTICE.md`, `SKILL.md`, `references/INDEX.md`, each folder's `_index.md`, and their Japanese versions (`*.ja.md`)
+- `README.md`, `README.ja.md`, `NOTICE.md`, and `NOTICE.ja.md`
+- `apple-hig-design/SKILL.md`, `apple-hig-design/references/INDEX.md`, and each folder's `_index.md`
 - The full text of the `## Web translation *(derived — not from Apple)*` section in every reference file
 - The directory structure and the frontmatter schema
 

@@ -8,7 +8,8 @@
 
 **1. 原著作物（MIT ライセンス）**
 
-- `README.md`、`NOTICE.md`、`SKILL.md`、`references/INDEX.md`、各フォルダの `_index.md`、およびそれらの日本語版（`*.ja.md`）
+- `README.md`、`README.ja.md`、`NOTICE.md`、`NOTICE.ja.md`
+- `apple-hig-design/SKILL.md`、`apple-hig-design/references/INDEX.md`、各フォルダの `_index.md`
 - 各リファレンスの `## Web translation *(derived — not from Apple)*` セクションの全文
 - ディレクトリ構造と frontmatter のスキーマ
 

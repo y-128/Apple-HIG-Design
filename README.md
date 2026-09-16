@@ -28,28 +28,28 @@ Example questions this skill lets Claude answer accurately:
 ## What's inside
 
 ```
-apple-hig-design/
-├── README.md                     # This file
-├── SKILL.md                      # Router file. Claude reads this first.
-├── NOTICE.md                     # Rights and licensing. Read before forking or redistributing.
-├── LICENSE
-├── README.ja.md / SKILL.ja.md / NOTICE.ja.md   # Japanese versions
-└── references/
-    ├── INDEX.md                # Index of all 158 topics
-    ├── getting-started/        #   9 files  Platform-specific starting points
-    ├── foundations/            #  18 files  Typography, color, layout, accessibility, etc.
-    ├── patterns/               #  25 files  Design patterns: modals, search, onboarding, etc.
-    ├── inputs/                 #  13 files  Gestures, keyboard, Digital Crown, and other input
-    ├── technologies/           #  29 files  Apple Pay, HealthKit, SharePlay, and other integrations
-    └── components/             #  64 files  UI components, split into 8 subfolders
-        ├── content/                       #  4
-        ├── layout-and-organization/       # 10
-        ├── menus-and-actions/             # 12
-        ├── navigation-and-search/         #  5
-        ├── presentation/                  #  8
-        ├── selection-and-input/           # 11
-        ├── status/                        #  4
-        └── system-experiences/            # 10
+Apple-HIG-Design/                     # Repository root
+├── README.md / README.ja.md          # This file (English / Japanese)
+├── NOTICE.md / NOTICE.ja.md          # Rights and licensing. Read before forking or redistributing.
+├── LICENSE                           # MIT license for the original work
+└── apple-hig-design/                 # The skill itself. This folder goes into ~/.claude/skills/
+    ├── SKILL.md                      # Router file. Claude reads this first.
+    └── references/
+        ├── INDEX.md                # Index of all 158 topics
+        ├── getting-started/        #   9 files  Platform-specific starting points
+        ├── foundations/            #  18 files  Typography, color, layout, accessibility, etc.
+        ├── patterns/               #  25 files  Design patterns: modals, search, onboarding, etc.
+        ├── inputs/                 #  13 files  Gestures, keyboard, Digital Crown, and other input
+        ├── technologies/           #  29 files  Apple Pay, HealthKit, SharePlay, and other integrations
+        └── components/             #  64 files  UI components, split into 8 subfolders
+            ├── content/                       #  4
+            ├── layout-and-organization/       # 10
+            ├── menus-and-actions/             # 12
+            ├── navigation-and-search/         #  5
+            ├── presentation/                  #  8
+            ├── selection-and-input/           # 11
+            ├── status/                        #  4
+            └── system-experiences/            # 10
 ```
 
 That's 9 + 18 + 25 + 13 + 29 + 64 = 158 topics in total.
@@ -65,7 +65,7 @@ Each reference file follows the same structure:
 | `Web translation *(derived — not from Apple)*` | This project's own reading of how the native principle maps to web UI. This is **not** Apple's guidance. |
 | `Do / Don't` | A side-by-side comparison table |
 
-Note on language: the reference files under `references/` are written in English so that they match Apple's terminology and API names. This README, NOTICE, SKILL, and the index files also have Japanese versions (`*.ja.md`).
+Note on language: the reference files under `references/` are written in English so that they match Apple's terminology and API names. This README and NOTICE also have Japanese versions (`README.ja.md`, `NOTICE.ja.md`).
 
 ## Requirements
 
@@ -77,12 +77,12 @@ Note on language: the reference files under `references/` are written in English
 1. Clone the repository somewhere on your machine:
 
    ```bash
-   git clone https://github.com/y-128/apple-hig-design.git
-   cd apple-hig-design
+   git clone https://github.com/y-128/Apple-HIG-Design.git
+   cd Apple-HIG-Design
    mkdir -p ~/.claude/skills
    ```
 
-   This creates a folder named `apple-hig-design` that contains another folder, also named `apple-hig-design`, which is the one that directly contains `SKILL.md`. The `cd` command moves you into the outer folder, and `mkdir -p` creates the skills directory if it does not exist yet.
+   This creates a folder named `Apple-HIG-Design` (the repository root). Inside it, the `apple-hig-design` folder is the skill itself and directly contains `SKILL.md`. The `cd` command moves you into the repository root, and `mkdir -p` creates the skills directory if it does not exist yet.
 
 2. Link the skill into Claude Code's skills directory. Two options:
 
@@ -106,7 +106,7 @@ Note on language: the reference files under `references/` are written in English
    ls ~/.claude/skills/apple-hig-design/SKILL.md
    ```
 
-   If this reports "No such file or directory," you linked one directory level too high or too low. Check whether `~/.claude/skills/apple-hig-design` itself contains `SKILL.md`, or whether it contains another `apple-hig-design` folder that does.
+   If this reports "No such file or directory," you linked one directory level too high or too low. Check whether `~/.claude/skills/apple-hig-design` itself contains `SKILL.md`, or whether you linked the repository root (`Apple-HIG-Design`) instead of the `apple-hig-design` folder inside it.
 
 4. Restart Claude Code, or start a new session. Skills are picked up at session start, so a running session won't see a skill you just installed.
 
