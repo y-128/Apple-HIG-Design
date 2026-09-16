@@ -1,91 +1,161 @@
+English | [日本語](README.ja.md)
+
 # apple-hig-design
 
-Apple Human Interface Guidelines を Claude が設計判断に使える形にした Claude Code スキル。
+A Claude Code skill that turns Apple's Human Interface Guidelines (HIG) into a reference Claude can use when it makes UI design decisions.
 
-UI を設計・実装・レビューするとき、Claude に「visionOS のボタンは最小何ポイントか」「モーダルをいつ使うべきか」を**記憶ではなく Apple の実際の記述から**答えさせるためのもの。ネイティブアプリだけでなく Web 実装でも使えるよう、各トピックに「ネイティブ原則を Web に読み替える指針」を併記している。
+## What is this?
 
-## 何が入っているか
+Apple's Human Interface Guidelines (HIG) are Apple's official rulebook for how apps on iOS, iPadOS, macOS, tvOS, visionOS, and watchOS should look and behave: button sizes, spacing, when to use a modal, how dark mode should work, and so on.
 
-HIG の全157トピックについて、英語のリファレンスと日本語全訳を1対1で収録している。
+A Claude Code "skill" is a folder of instructions and reference files that Claude Code loads automatically when it decides the folder is relevant to what you asked. You don't run a command to activate it — Claude reads a short description of each installed skill, and pulls in the full content only when the task matches.
+
+This skill gives Claude 158 reference files, one per HIG topic, each containing Apple's actual wording and actual numbers. Instead of guessing "a tap target is probably 44 points" from memory, Claude opens the relevant file and quotes the number Apple actually publishes — including platform-specific exceptions (for example, tap targets are 44pt on iOS but 60pt on visionOS). Each topic also includes a "Web translation" section: this project's own interpretation of how the native principle might apply to web UI. Apple never wrote guidance for the web, so this section is clearly marked as derived, not sourced from Apple.
+
+## Who is this for?
+
+Anyone who asks Claude Code to design, implement, or review UI, whether for a native Apple platform app or a web app, and wants answers grounded in Apple's actual documentation instead of Claude's memory.
+
+Example questions this skill lets Claude answer accurately:
+
+- "Is this iOS sheet presentation correct per the HIG?"
+- "How should this web modal behave if I want it to follow Apple's design thinking?"
+- "What's the minimum tap target size on visionOS?"
+- "Should this be a sheet or an alert?"
+- "How deep can a sidebar's hierarchy go?"
+- "Is this accessible enough?"
+
+## What's inside
 
 ```
 apple-hig-design/
-├── SKILL.md                  # ルーター。Claude はまずこれを読む
+├── README.md                     # This file
+├── SKILL.md                      # Router file. Claude reads this first.
+├── NOTICE.md                     # Rights and licensing. Read before forking or redistributing.
 ├── LICENSE
-├── NOTICE.md                 # 権利関係。再配布前に必ず読む
+├── README.ja.md / SKILL.ja.md / NOTICE.ja.md   # Japanese versions
 └── references/
-    ├── INDEX.md              # 全157件の索引
-    ├── getting-started/      #   8件  プラットフォーム別の設計入門
-    ├── foundations/          #  18件  タイポグラフィ、カラー、レイアウト、アクセシビリティ等
-    ├── patterns/             #  25件  モーダル、検索、オンボーディング等の設計パターン
-    ├── inputs/               #  13件  ジェスチャ、キーボード、Digital Crown 等の入力
-    ├── technologies/         #  29件  Apple Pay、HealthKit、SharePlay 等の技術連携
-    └── components/           #  64件  ボタン、シート、タブバー等の UI 部品（7分類）
+    ├── INDEX.md                # Index of all 158 topics
+    ├── getting-started/        #   9 files  Platform-specific starting points
+    ├── foundations/            #  18 files  Typography, color, layout, accessibility, etc.
+    ├── patterns/               #  25 files  Design patterns: modals, search, onboarding, etc.
+    ├── inputs/                 #  13 files  Gestures, keyboard, Digital Crown, and other input
+    ├── technologies/           #  29 files  Apple Pay, HealthKit, SharePlay, and other integrations
+    └── components/             #  64 files  UI components, split into 8 subfolders
+        ├── content/                       #  4
+        ├── layout-and-organization/       # 10
+        ├── menus-and-actions/             # 12
+        ├── navigation-and-search/         #  5
+        ├── presentation/                  #  8
+        ├── selection-and-input/           # 11
+        ├── status/                        #  4
+        └── system-experiences/            # 10
 ```
 
-各リファレンスの構成:
+That's 9 + 18 + 25 + 13 + 29 + 64 = 158 topics in total.
 
-| セクション | 内容 |
+Each reference file follows the same structure:
+
+| Section | Content |
 |---|---|
-| `Core guidance` | Apple の指示文と、その理由。数値は一切省略しない |
-| `Platform considerations` | iOS / iPadOS / macOS / tvOS / visionOS / watchOS の差分 |
-| `Specifications` | 仕様表（原典に表がある場合のみ） |
-| `Native implementation` | SwiftUI / UIKit / AppKit の API 名と公式ドキュメントへの導線 |
-| `Web translation` | ネイティブ原則の Web への読み替え。**Apple 原文ではなく本プロジェクトの派生物** |
-| `Do / Don't` | 対比表 |
+| `Core guidance` | Apple's instructions and the reasoning behind them. Numbers are never rounded or omitted. |
+| `Platform considerations` | Differences across iOS / iPadOS / macOS / tvOS / visionOS / watchOS |
+| `Specifications` | A spec table, only included when Apple's original page has one |
+| `Native implementation` | SwiftUI / UIKit / AppKit API names, linked to Apple's official docs |
+| `Web translation *(derived — not from Apple)*` | This project's own reading of how the native principle maps to web UI. This is **not** Apple's guidance. |
+| `Do / Don't` | A side-by-side comparison table |
 
-日本語版は `<topic>.ja.md` として併置してある。内容確認用であり、**実作業では英語版を正とする**（Apple の用語は英語が一次表記のため）。
+Note on language: the reference files under `references/` are written in English so that they match Apple's terminology and API names. This README, NOTICE, SKILL, and the index files also have Japanese versions (`*.ja.md`).
 
-## 導入
+## Requirements
 
-Claude Code のスキルディレクトリに配置する。
+- Claude Code installed and working.
+- `git`, if you want to install by cloning. Not required if you download the files another way.
 
-```bash
-git clone https://github.com/y-128/apple-hig-design.git
-ln -s "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
-```
+## Installation
 
-`~/.claude/skills/` 配下に置けば、Claude Code が自動的に認識する。個別の設定は不要。
+1. Clone the repository somewhere on your machine:
 
-配置後の確認:
+   ```bash
+   git clone https://github.com/y-128/apple-hig-design.git
+   cd apple-hig-design
+   mkdir -p ~/.claude/skills
+   ```
 
-```bash
-ls -l ~/.claude/skills/apple-hig-design/SKILL.md
-```
+   This creates a folder named `apple-hig-design` that contains another folder, also named `apple-hig-design`, which is the one that directly contains `SKILL.md`. The `cd` command moves you into the outer folder, and `mkdir -p` creates the skills directory if it does not exist yet.
 
-## 使い方
+2. Link the skill into Claude Code's skills directory. Two options:
 
-明示的に呼び出す必要はない。UI 設計・実装の文脈で Claude が自動的に参照する。
+   **Option A: symlink** (keeps the skill in sync if you later `git pull`)
 
-意図的に使わせたい場合は、依頼に文脈を添える。
+   ```bash
+   ln -s "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   ```
 
-- 「iOS アプリのシート表示、HIG 的に正しいか見て」
-- 「この Web のモーダル、Apple の考え方だとどう設計すべき?」
-- 「visionOS のタップ標的の最小サイズは?」
+   **Option B: copy** (no symlink, but you won't get updates automatically)
 
-Claude は `references/INDEX.md` で該当トピックを引き、必要なファイルだけを読む。157件すべてを読み込むことはない。
+   ```bash
+   cp -R "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   ```
 
-## 既知の制約
+   For a project-local install instead of a global one, use `.claude/skills/apple-hig-design` inside your project's own directory instead of `~/.claude/skills/apple-hig-design`.
 
-リファレンスは PDF から抽出したテキストを基に生成しているため、原典の一部が取得できていない。該当箇所には `Source limitation` として明記してあり、**欠落を推測で埋めることはしていない**。
+3. Verify the link points at the right place:
 
-| 制約 | 具体例 |
+   ```bash
+   ls ~/.claude/skills/apple-hig-design/SKILL.md
+   ```
+
+   If this reports "No such file or directory," you linked one directory level too high or too low. Check whether `~/.claude/skills/apple-hig-design` itself contains `SKILL.md`, or whether it contains another `apple-hig-design` folder that does.
+
+4. Restart Claude Code, or start a new session. Skills are picked up at session start, so a running session won't see a skill you just installed.
+
+## Usage
+
+You don't need to invoke this skill explicitly. Claude Code reads the short description of every installed skill and decides on its own when a task is relevant to UI design, so it will pull in this skill's content automatically during normal conversation.
+
+Example prompts that will trigger it on their own:
+
+- "Review this iOS sheet presentation against the HIG."
+- "What's the minimum tap target size on visionOS?"
+- "How should dark mode work for this screen?"
+
+If you want to force it, name the skill directly: "Use the apple-hig-design skill to check this." When triggered, Claude first reads `references/INDEX.md` to find the relevant topic, then opens only the specific file(s) it needs. It does not read all 158 files for a single question.
+
+## Known limitations
+
+The reference files were generated from text extracted out of Apple's HIG pages. Some parts of the original pages could not be extracted. Wherever that happened, the file says so explicitly under a `Source limitation` note — nothing is filled in by guessing.
+
+| Limitation | Example |
 |---|---|
-| JavaScript タブの2番目以降が未取得 | Typography の Dynamic Type サイズ表。既定サイズ（Large）の表が存在しない |
-| Change log が原典にない | 157件中44件。`last_updated: unknown` としている |
-| 画像・図版が抽出不可 | Icons の Standard icons 表はラベルと SF Symbol 名のみ |
-| 対話ウィジェットの中身が消失 | Spatial layout の before/after 実演 |
+| Only the first tab of multi-tab JavaScript widgets was captured | The Dynamic Type size table: only the first size group is present, not the full Large-through-AX5 progression |
+| Some topics have no published change log from Apple | 43 of the 158 files have `last_updated: unknown` in their frontmatter |
+| Images and diagrams could not be extracted | The Standard icons table under Icons lists only labels and SF Symbol names, not the images |
+| Interactive before/after widgets lost their content | The Spatial layout topic's before/after demonstration |
 
-`last_updated` が古い、あるいは `unknown` のトピックについては、frontmatter の `url` から Apple の一次情報を確認すること。**このスキルは Apple の更新に自動追随しない。**
+65 of the 158 files contain at least one `Source limitation` note.
 
-## 再生成
+## Updating and staleness
 
-手元に HIG の PDF がある場合、リファレンスを作り直せる。`scripts/` の手順に従う。生成には Claude Code のサブエージェントを使う。
+This skill is **not** automatically kept in sync with Apple's site. The content is a snapshot taken in July 2026, with one later update on 2026-09-09 that added "Designing for iPhone Duo" and refreshed the Layout, Branding, and SharePlay topics.
 
-## ライセンス
+If a file's `last_updated` in its frontmatter is old or says `unknown`, or if you're making a decision that really matters, check the `url` field in that file's frontmatter and confirm against Apple's current page before relying on it.
 
-原著作物（スキル構造、`Web translation` セクション、スクリプト）は MIT。
+## Glossary
 
-**Apple HIG に由来する記述は MIT の対象外**であり、`Human Interface Guidelines © Apple Inc. All rights reserved.` に従う。再配布する前に [NOTICE.md](NOTICE.md) を必ず読むこと。権利関係と、公開範囲を決めるための選択肢を整理してある。
+- **HIG (Human Interface Guidelines)**: Apple's official design guidelines for its platforms.
+- **Skill**: A folder of instructions and reference material that Claude Code loads automatically when relevant to the task at hand.
+- **SwiftUI / UIKit / AppKit**: Apple's UI frameworks. SwiftUI is Apple's current cross-platform framework; UIKit is the older framework for iOS/iPadOS/tvOS; AppKit is the older framework for macOS.
+- **Point (pt)**: Apple's unit for UI measurements. It is a logical unit that maps to a different number of physical pixels depending on screen density, unlike a fixed pixel measurement.
+- **Dynamic Type**: Apple's system for letting users scale all text in an app up or down, for readability and accessibility.
+- **SF Symbols**: Apple's built-in icon library, designed to match system fonts and scale with Dynamic Type.
+- **Liquid Glass**: Apple's current translucent, light-refracting material design language, used across system UI.
+- **Frontmatter**: The block of metadata (title, url, platforms, last_updated, etc.) at the top of each reference file, written in YAML.
 
-本プロジェクトは Apple Inc. と関係を持たず、Apple による承認・後援を受けていない。
+## License
+
+Original work in this project (the skill structure, the `Web translation` sections, this documentation) is licensed under MIT — see [LICENSE](LICENSE).
+
+**Content derived from Apple's HIG is not covered by the MIT license.** It remains subject to `Human Interface Guidelines © Apple Inc. All rights reserved.` Read [NOTICE.md](NOTICE.md) before you fork or redistribute this repository. It explains which parts the MIT license covers and how this project handles Apple's rights.
+
+This project has no affiliation with Apple Inc. and is not endorsed or sponsored by Apple.

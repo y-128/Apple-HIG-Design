@@ -1,10 +1,10 @@
 # components/system-experiences
 
-システム側に現れる体験（ウィジェット、通知、Live Activities）。
+Experiences that surface at the system level, outside your app's own windows: widgets, notifications, Live Activities.
 
-収録 10件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+10 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [App Shortcuts](app-shortcuts.md) | An App Shortcut gives people access to your app's key functions or content throughout the… | [iOS, iPadOS, visionOS, watchOS] |
 | [Complications](complications.md) | A complication displays timely, relevant information on the watch face, where people can… | [watchOS] |

@@ -1,10 +1,10 @@
 # patterns
 
-モーダル、検索、オンボーディングなど、機能をまたぐ設計パターン。
+Design patterns (recurring solutions to recurring problems) for modality, search, onboarding, and other flows that cut across individual features.
 
-収録 25件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+25 topics. See the [master index](../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Charting data](charting-data.md) | Presenting data in a chart can help you communicate information with clarity and appeal. | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Collaboration and sharing](collaboration-and-sharing.md) | Great collaboration and sharing experiences are simple and responsive, letting people eng… | [iOS, iPadOS, macOS, visionOS, watchOS] |

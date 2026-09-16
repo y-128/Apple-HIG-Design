@@ -1,49 +1,45 @@
-# NOTICE — 第三者コンテンツと権利について
+English | [日本語](NOTICE.ja.md)
 
-このリポジトリを GitHub などで再配布する前に読んでください。
+# NOTICE: Third-party content and rights
 
-## このリポジトリには2種類のコンテンツが混在している
+This repository is published publicly as a free reference for learning and applying Apple's Human Interface Guidelines. This notice explains which parts are covered by the MIT license, which parts are not, and how this project handles Apple's rights.
 
-**1. 原著作物（MIT ライセンス）**
+## This repository contains two kinds of content
 
-- `SKILL.md`、`references/INDEX.md`、各フォルダの `_index.md`
-- 各リファレンスの `## Web translation *(derived — not from Apple)*` セクション全文
-- ディレクトリ構造、frontmatter スキーマ、生成・検証スクリプト
+**1. Original work (MIT license)**
 
-これらは本リポジトリの著者が書いたもので、[LICENSE](LICENSE) の MIT ライセンスに従う。
+- `README.md`, `NOTICE.md`, `SKILL.md`, `references/INDEX.md`, each folder's `_index.md`, and their Japanese versions (`*.ja.md`)
+- The full text of the `## Web translation *(derived — not from Apple)*` section in every reference file
+- The directory structure and the frontmatter schema
 
-**2. Apple Human Interface Guidelines に由来する記述（MIT ライセンスの対象外）**
+This content was written by this project's author and is licensed under MIT. See [LICENSE](LICENSE).
 
-各リファレンスの `Core guidance` / `Platform considerations` / `Specifications` / `Native implementation` / `Do / Don't` の各セクションは、Apple Inc. が公開する Human Interface Guidelines を要約・再構成したものである。
+**2. Content derived from Apple's Human Interface Guidelines (not covered by MIT)**
+
+The `Core guidance`, `Platform considerations`, `Specifications`, `Native implementation`, and `Do / Don't` sections of every reference file summarize and restructure content from the Human Interface Guidelines published by Apple Inc.
 
 > Human Interface Guidelines © Apple Inc. All rights reserved.
 
-Apple は HIG の再配布を許諾していない。**本リポジトリは Apple から HIG の再配布ライセンスを受けておらず、MIT ライセンスによって Apple のコンテンツの利用を許諾することもできない。**
+This project has no license from Apple to redistribute HIG content. **The MIT license in this repository does not grant any rights to Apple's content.** Those rights belong to Apple Inc.
 
-## 承知しておくべきリスク
+## How this project publishes Apple-derived content
 
-要約であっても、Apple の指示文（bold で書かれたルール文）や仕様表を原文に近い形で保持している箇所がある。事実データ（ポイントサイズ、コントラスト比などの数値）は一般に著作権保護が弱いが、**指示文の言い回しは Apple の表現であり、保護され得る**。
+- **Purpose:** The content is published for educational and non-commercial reference, to help people design interfaces that follow Apple's guidance. It is not sold and is not offered as a replacement for Apple's own documentation.
+- **Attribution:** Every reference file names its source page in the `url` field of its frontmatter. Apple's page is the primary source and always takes precedence.
+- **Scope of copying:** Some parts keep Apple's wording closely, especially the bolded rule statements and the spec tables, because exact wording and exact numbers are what make the reference reliable. Factual values such as point sizes and contrast ratios are kept as published.
+- **Takedown requests:** If Apple Inc. or its representative asks for any content to be removed, it will be removed promptly.
 
-157件という網羅的な規模は、この点でリスクを上げる方向に働く。一部を引用する行為と、ガイドライン全体の代替物を作る行為は、法的な評価が異なる。
+## If you fork or redistribute this repository
 
-公開リポジトリとして配布する場合、これは理論上の懸念ではなく、Apple から削除要請（DMCA takedown）を受け得る現実的な可能性である。判断は利用者に委ねられる。
+The MIT license covers only the original work listed above. If you copy, fork, or redistribute the Apple-derived sections, you are responsible for how you use them. Keep the Apple copyright notice and this NOTICE file, and do not use the content commercially.
 
-## リスクを下げたい場合の選択肢
+## Disclaimer and attribution
 
-| 方針 | 内容 |
-|---|---|
-| プライベートリポジトリ | 個人・チーム内利用に限定する。最も安全 |
-| 生成スクリプトのみ公開 | リファレンス本体は配布せず、利用者が手元の PDF から生成する形にする |
-| Web セクションのみ公開 | 原著作物だけを配布し、Apple 由来部分は除く |
-| そのまま公開 | 教育目的・出典明示・非商用を明記したうえで、削除要請には速やかに応じる |
+- This project is not affiliated with Apple Inc. and is not endorsed, sponsored, or approved by Apple.
+- Apple, iOS, iPadOS, macOS, tvOS, visionOS, watchOS, SwiftUI, UIKit, AppKit, SF Symbols, Liquid Glass, Dynamic Type, and other names used in this repository are trademarks of Apple Inc.
+- The content is a snapshot taken at the time of extraction. It does not update automatically when Apple revises the guidelines.
+- The reference files were generated from text extracted from Apple's HIG pages. Some parts of the original pages could not be extracted: the second and later tabs of tabbed tables, images, and interactive before/after demonstrations. Each file marks these gaps with a `Source limitation` note.
 
-## 免責と帰属
+## Contact
 
-- 本プロジェクトは Apple Inc. と一切の関係を持たず、Apple による承認・後援・提携を受けていない。
-- Apple、iOS、iPadOS、macOS、tvOS、visionOS、watchOS、SwiftUI、UIKit、AppKit、SF Symbols、Liquid Glass、Dynamic Type ほか本文中の名称は Apple Inc. の商標である。
-- 各リファレンスの frontmatter に記載した `url` が一次情報であり、**常にそちらが正となる**。本リポジトリの記述は取得時点のスナップショットであり、Apple による更新に追随しない。
-- リファレンスは PDF から機械的に抽出したテキストを基に生成しており、原典の一部（JavaScript タブの2番目以降、画像、対話ウィジェット）は取得できていない。該当箇所には `Source limitation` として明記してある。
-
-## 削除要請について
-
-Apple Inc. またはその代理人から連絡があった場合、該当コンテンツを速やかに削除する。連絡先はリポジトリの Issues を参照。
+For takedown requests or other rights questions, open an issue in this repository.

@@ -1,4 +1,7 @@
 *.ja.md
+# Keep Japanese versions of the guide/index files (original work); topic translations stay excluded
+!apple-hig-design/README.ja.md
+!apple-hig-design/NOTICE.ja.md
 human interface guidlines/
 pdf-1-web-serene-map.md
 .DS_Store

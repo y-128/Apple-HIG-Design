@@ -1,10 +1,10 @@
 # foundations
 
-タイポグラフィ、カラー、レイアウト、アクセシビリティなど、全 UI に効く土台。
+Typography, color, layout, accessibility, and the other foundations that affect every piece of UI you build.
 
-収録 18件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+18 topics. See the [master index](../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Accessibility](accessibility.md) | Accessible user interfaces empower everyone to have a great experience with your app or g… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [App icons](app-icons.md) | A unique, memorable icon expresses your app's or game's purpose and personality and helps… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
@@ -15,7 +15,7 @@
 | [Images](images.md) | To make sure your artwork looks great on all devices you support, learn how the system di… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Immersive experiences](immersive-experiences.md) | In visionOS, you can design apps and games that extend beyond windows and volumes, immers… | [visionOS] |
 | [Inclusion](inclusion.md) | Inclusive apps and games put people first by prioritizing respectful communication and pr… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
-| [Layout](layout.md) | A consistent layout that adapts to various contexts makes your experience more approachab… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
+| [Layout](layout.md) | A consistent layout that adapts across display sizes, orientations, and multitasking conf… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Materials](materials.md) | A material is a visual effect that creates a sense of depth, layering, and hierarchy betw… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Motion](motion.md) | Beautiful, fluid motions bring the interface to life, conveying status, providing feedbac… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Privacy](privacy.md) | Privacy is paramount: it's critical to be transparent about the privacy-related data and… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |

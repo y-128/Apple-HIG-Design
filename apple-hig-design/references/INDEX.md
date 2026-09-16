@@ -1,14 +1,37 @@
-# Apple HIG リファレンス索引
+# Apple HIG Reference Index
 
-全 157 トピック。英語版 `<slug>.md` が正、日本語版 `<slug>.ja.md` は内容確認用。
+This file lists all 158 Apple Human Interface Guidelines (HIG) topics covered by this skill, grouped by folder.
 
-探しているトピックを下の表から見つけ、**そのファイルだけを読む**。全件を読み込む必要はない。
+**How to use this file:** find the topic you need in the table below, then open only that one file. You do not need to read this whole index, and you do not need to read every topic file in a folder just because you opened one of them.
+
+Each row's **Summary** column is the opening sentence of Apple's own page for that topic, truncated with `…` when it runs long. It is meant to help you pick the right topic, not to replace reading the file itself.
+
+Each folder also has its own `_index.md`, which repeats that folder's rows together with a **Platforms** column listing which Apple platforms the topic applies to (iOS, iPadOS, macOS, tvOS, visionOS, watchOS, or Web).
+
+## Folders at a glance
+
+| Folder | Topics | Index |
+|---|---|---|
+| getting-started | 9 | [getting-started/_index.md](getting-started/_index.md) |
+| foundations | 18 | [foundations/_index.md](foundations/_index.md) |
+| patterns | 25 | [patterns/_index.md](patterns/_index.md) |
+| inputs | 13 | [inputs/_index.md](inputs/_index.md) |
+| technologies | 29 | [technologies/_index.md](technologies/_index.md) |
+| components (8 groups below; `components` are Apple's reusable UI building blocks, such as buttons and sheets) | 64 | see rows below |
+| &nbsp;&nbsp;components/content | 4 | [components/content/_index.md](components/content/_index.md) |
+| &nbsp;&nbsp;components/layout-and-organization | 10 | [components/layout-and-organization/_index.md](components/layout-and-organization/_index.md) |
+| &nbsp;&nbsp;components/menus-and-actions | 12 | [components/menus-and-actions/_index.md](components/menus-and-actions/_index.md) |
+| &nbsp;&nbsp;components/navigation-and-search | 5 | [components/navigation-and-search/_index.md](components/navigation-and-search/_index.md) |
+| &nbsp;&nbsp;components/presentation | 8 | [components/presentation/_index.md](components/presentation/_index.md) |
+| &nbsp;&nbsp;components/selection-and-input | 11 | [components/selection-and-input/_index.md](components/selection-and-input/_index.md) |
+| &nbsp;&nbsp;components/status | 4 | [components/status/_index.md](components/status/_index.md) |
+| &nbsp;&nbsp;components/system-experiences | 10 | [components/system-experiences/_index.md](components/system-experiences/_index.md) |
 
 ## components/content
 
-コンテンツを表示する部品（グラフ、画像、テキスト、Web ビュー）。
+Components (the reusable UI building blocks Apple platforms provide) that display content: charts, images, text, and web views.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Charts](components/content/charts.md) | Organize data in a chart to communicate information with clarity and visual appeal. |
 | [Image views](components/content/image-views.md) | An image view displays a single image — or in some cases, an animated sequence of images — on a transparent o… |
@@ -17,9 +40,9 @@
 
 ## components/layout-and-organization
 
-情報を配置・整理する部品（リスト、分割ビュー、タブビュー）。
+Components that arrange and organize information: lists, split views, tab views.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Boxes](components/layout-and-organization/boxes.md) | A box creates a visually distinct group of logically related information and components. |
 | [Collections](components/layout-and-organization/collections.md) | A collection manages an ordered set of content and presents it in a customizable and highly visual layout. |
@@ -34,9 +57,9 @@
 
 ## components/menus-and-actions
 
-操作を提示する部品（ボタン、メニュー、ツールバー）。
+Components that present actions people can take: buttons, menus, toolbars.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Activity views](components/menus-and-actions/activity-views.md) | An activity view — often called a share sheet — presents a range of tasks that people can perform in the curr… |
 | [Buttons](components/menus-and-actions/buttons.md) | A button initiates an instantaneous action. |
@@ -53,9 +76,9 @@
 
 ## components/navigation-and-search
 
-移動と検索の部品（タブバー、サイドバー、検索フィールド）。
+Components for navigation and search: tab bars, sidebars, search fields.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Path controls](components/navigation-and-search/path-controls.md) | A path control shows the file system path of a selected file or folder. |
 | [Search fields](components/navigation-and-search/search-fields.md) | A search field lets people search a collection of content for specific terms they enter. |
@@ -65,9 +88,9 @@
 
 ## components/presentation
 
-一時的に何かを提示する部品（シート、アラート、ポップオーバー、ウィンドウ）。
+Components that present something temporarily, on top of the current context: sheets, alerts, popovers, windows.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Action sheets](components/presentation/action-sheets.md) | An action sheet is a modal view that presents choices related to an action people initiate. |
 | [Alerts](components/presentation/alerts.md) | An alert gives people critical information they need right away. |
@@ -80,9 +103,9 @@
 
 ## components/selection-and-input
 
-値を選ぶ・入力する部品（テキストフィールド、トグル、ピッカー）。
+Components for choosing and entering values: text fields, toggles, pickers.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Color wells](components/selection-and-input/color-wells.md) | A color well lets people adjust the color of text, shapes, guides, and other onscreen elements. |
 | [Combo boxes](components/selection-and-input/combo-boxes.md) | A combo box combines a text field with a pull-down button in a single control. |
@@ -98,9 +121,9 @@
 
 ## components/status
 
-状態を示す部品（進捗インジケータ、ゲージ、アクティビティリング）。
+Components that show status: progress indicators, gauges, activity rings.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Activity rings](components/status/activity-rings.md) | Activity rings show an individual's daily progress toward Move, Exercise, and Stand goals. |
 | [Gauges](components/status/gauges.md) | A gauge displays a specific numerical value within a range of values. |
@@ -109,9 +132,9 @@
 
 ## components/system-experiences
 
-システム側に現れる体験（ウィジェット、通知、Live Activities）。
+Experiences that surface at the system level, outside your app's own windows: widgets, notifications, Live Activities.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [App Shortcuts](components/system-experiences/app-shortcuts.md) | An App Shortcut gives people access to your app's key functions or content throughout the system. |
 | [Complications](components/system-experiences/complications.md) | A complication displays timely, relevant information on the watch face, where people can view it each time th… |
@@ -126,9 +149,9 @@
 
 ## foundations
 
-タイポグラフィ、カラー、レイアウト、アクセシビリティなど、全 UI に効く土台。
+Typography, color, layout, accessibility, and the other foundations that affect every piece of UI you build.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Accessibility](foundations/accessibility.md) | Accessible user interfaces empower everyone to have a great experience with your app or game. |
 | [App icons](foundations/app-icons.md) | A unique, memorable icon expresses your app's or game's purpose and personality and helps people recognize it… |
@@ -139,7 +162,7 @@
 | [Images](foundations/images.md) | To make sure your artwork looks great on all devices you support, learn how the system displays content and h… |
 | [Immersive experiences](foundations/immersive-experiences.md) | In visionOS, you can design apps and games that extend beyond windows and volumes, immersing people in your c… |
 | [Inclusion](foundations/inclusion.md) | Inclusive apps and games put people first by prioritizing respectful communication and presenting content and… |
-| [Layout](foundations/layout.md) | A consistent layout that adapts to various contexts makes your experience more approachable and helps people… |
+| [Layout](foundations/layout.md) | A consistent layout that adapts across display sizes, orientations, and multitasking configurations helps peo… |
 | [Materials](foundations/materials.md) | A material is a visual effect that creates a sense of depth, layering, and hierarchy between foreground and b… |
 | [Motion](foundations/motion.md) | Beautiful, fluid motions bring the interface to life, conveying status, providing feedback and instruction, a… |
 | [Privacy](foundations/privacy.md) | Privacy is paramount: it's critical to be transparent about the privacy-related data and resources you requir… |
@@ -151,14 +174,15 @@
 
 ## getting-started
 
-各プラットフォームの性格と、設計の出発点になる原則。
+The character of each Apple platform, and the design principles that give you a starting point before you design anything.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Design principles](getting-started/design-principles.md) | Explore fundamental principles that guide design across Apple platforms. |
 | [Designing for games](getting-started/designing-for-games.md) | When people play your game on an Apple device, they dive into the world you designed while relying on the pla… |
 | [Designing for iOS](getting-started/designing-for-ios.md) | People depend on their iPhone to help them stay connected, play games, view media, accomplish tasks, and trac… |
 | [Designing for iPadOS](getting-started/designing-for-ipados.md) | People value the power, mobility, and flexibility of iPad as they enjoy media, play games, perform detailed p… |
+| [Designing for iPhone Duo](getting-started/designing-for-iphone-duo.md) | An app designed for iPhone Duo adapts seamlessly to both displays, providing a continuous experience as the d… |
 | [Designing for macOS](getting-started/designing-for-macos.md) | People rely on the power, spaciousness, and flexibility of a Mac as they perform in-depth productivity tasks,… |
 | [Designing for tvOS](getting-started/designing-for-tvos.md) | People enjoy the vibrant content, immersive experiences, and streamlined interactions that tvOS delivers in m… |
 | [Designing for visionOS](getting-started/designing-for-visionos.md) | When people wear Apple Vision Pro, they enter an infinite 3D space where they can engage with your app or gam… |
@@ -166,9 +190,9 @@
 
 ## inputs
 
-ジェスチャ、キーボード、Digital Crown、視線など入力手段ごとの設計。
+Design guidance for each input method people use to interact with your app: gestures, keyboard, Digital Crown, eye tracking, and more.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Action button](inputs/action-button.md) | The Action button gives people quick access to their favorite features on supported iPhone and Apple Watch mo… |
 | [Apple Pencil and Scribble](inputs/apple-pencil-and-scribble.md) | Apple Pencil helps make drawing, handwriting, and marking effortless and natural, in addition to performing w… |
@@ -186,9 +210,9 @@
 
 ## patterns
 
-モーダル、検索、オンボーディングなど、機能をまたぐ設計パターン。
+Design patterns (recurring solutions to recurring problems) for modality, search, onboarding, and other flows that cut across individual features.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [Charting data](patterns/charting-data.md) | Presenting data in a chart can help you communicate information with clarity and appeal. |
 | [Collaboration and sharing](patterns/collaboration-and-sharing.md) | Great collaboration and sharing experiences are simple and responsive, letting people engage with the content… |
@@ -218,9 +242,9 @@
 
 ## technologies
 
-Apple Pay、HealthKit、SharePlay など、システム機能と連携するときの設計。
+Design guidance for working with system technologies and services, such as Apple Pay, HealthKit, and SharePlay.
 
-| トピック | 概要 |
+| Topic | Summary |
 |---|---|
 | [AirPlay](technologies/airplay.md) | AirPlay lets people stream media content wirelessly from iOS, iPadOS, macOS, and tvOS devices to Apple TV, Ho… |
 | [Always On](technologies/always-on.md) | On devices that include the Always On display, the system can continue to display an app's interface when peo… |
@@ -244,7 +268,7 @@ Apple Pay、HealthKit、SharePlay など、システム機能と連携すると�
 | [NFC](technologies/nfc.md) | Near-field communication (NFC) allows devices within a few centimeters of each other to exchange information… |
 | [Photo editing](technologies/photo-editing.md) | Photo-editing extensions let people modify photos and videos within the Photos app by applying filters or mak… |
 | [ResearchKit](technologies/researchkit.md) | A research app lets people everywhere participate in important medical research studies. |
-| [SharePlay](technologies/shareplay.md) | SharePlay helps multiple people share activities — like viewing a movie, listening to music, playing a game,… |
+| [SharePlay](technologies/shareplay.md) | SharePlay lets people experience activities together from anywhere, whether they're watching a movie, playing… |
 | [ShazamKit](technologies/shazamkit.md) | ShazamKit supports audio recognition by matching an audio sample against the ShazamKit catalog or a custom au… |
 | [Sign in with Apple](technologies/sign-in-with-apple.md) | Sign in with Apple provides a fast, private way to sign into apps and websites, giving people a consistent ex… |
 | [Siri](technologies/siri.md) | People use Siri to help them with the things they need to find, know, or do every day. |

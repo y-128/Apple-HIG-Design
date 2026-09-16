@@ -1,10 +1,10 @@
 # components/status
 
-状態を示す部品（進捗インジケータ、ゲージ、アクティビティリング）。
+Components that show status: progress indicators, gauges, activity rings.
 
-収録 4件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+4 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Activity rings](activity-rings.md) | Activity rings show an individual's daily progress toward Move, Exercise, and Stand goals. | [iOS, iPadOS, watchOS] |
 | [Gauges](gauges.md) | A gauge displays a specific numerical value within a range of values. | [iOS, iPadOS, macOS, visionOS, watchOS] |

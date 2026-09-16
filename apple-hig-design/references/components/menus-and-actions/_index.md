@@ -1,10 +1,10 @@
 # components/menus-and-actions
 
-操作を提示する部品（ボタン、メニュー、ツールバー）。
+Components that present actions people can take: buttons, menus, toolbars.
 
-収録 12件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+12 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Activity views](activity-views.md) | An activity view — often called a share sheet — presents a range of tasks that people can… | [iOS, iPadOS, visionOS] |
 | [Buttons](buttons.md) | A button initiates an instantaneous action. | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |

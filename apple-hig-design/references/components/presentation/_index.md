@@ -1,10 +1,10 @@
 # components/presentation
 
-一時的に何かを提示する部品（シート、アラート、ポップオーバー、ウィンドウ）。
+Components that present something temporarily, on top of the current context: sheets, alerts, popovers, windows.
 
-収録 8件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+8 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Action sheets](action-sheets.md) | An action sheet is a modal view that presents choices related to an action people initiat… | [iOS, iPadOS, macOS, tvOS, watchOS] |
 | [Alerts](alerts.md) | An alert gives people critical information they need right away. | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |

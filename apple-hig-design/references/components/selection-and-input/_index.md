@@ -1,10 +1,10 @@
 # components/selection-and-input
 
-値を選ぶ・入力する部品（テキストフィールド、トグル、ピッカー）。
+Components for choosing and entering values: text fields, toggles, pickers.
 
-収録 11件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+11 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Color wells](color-wells.md) | A color well lets people adjust the color of text, shapes, guides, and other onscreen ele… | [iOS, iPadOS, macOS, visionOS] |
 | [Combo boxes](combo-boxes.md) | A combo box combines a text field with a pull-down button in a single control. | [macOS] |

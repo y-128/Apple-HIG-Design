@@ -1,10 +1,10 @@
 # components/layout-and-organization
 
-情報を配置・整理する部品（リスト、分割ビュー、タブビュー）。
+Components that arrange and organize information: lists, split views, tab views.
 
-収録 10件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+10 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Boxes](boxes.md) | A box creates a visually distinct group of logically related information and components. | [iOS, iPadOS, macOS, visionOS] |
 | [Collections](collections.md) | A collection manages an ordered set of content and presents it in a customizable and high… | [iOS, iPadOS, macOS, tvOS, visionOS] |

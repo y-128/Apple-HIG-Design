@@ -1,10 +1,10 @@
 # technologies
 
-Apple Pay、HealthKit、SharePlay など、システム機能と連携するときの設計。
+Design guidance for working with system technologies and services, such as Apple Pay, HealthKit, and SharePlay.
 
-収録 29件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+29 topics. See the [master index](../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [AirPlay](airplay.md) | AirPlay lets people stream media content wirelessly from iOS, iPadOS, macOS, and tvOS dev… | [iOS, iPadOS, macOS, tvOS] |
 | [Always On](always-on.md) | On devices that include the Always On display, the system can continue to display an app'… | [iOS, watchOS] |
@@ -28,7 +28,7 @@ Apple Pay、HealthKit、SharePlay など、システム機能と連携すると�
 | [NFC](nfc.md) | Near-field communication (NFC) allows devices within a few centimeters of each other to e… | [iOS, iPadOS] |
 | [Photo editing](photo-editing.md) | Photo-editing extensions let people modify photos and videos within the Photos app by app… | [iOS, iPadOS, macOS] |
 | [ResearchKit](researchkit.md) | A research app lets people everywhere participate in important medical research studies. | [iOS, iPadOS] |
-| [SharePlay](shareplay.md) | SharePlay helps multiple people share activities — like viewing a movie, listening to mus… | [iOS, iPadOS, macOS, tvOS, visionOS] |
+| [SharePlay](shareplay.md) | SharePlay lets people experience activities together from anywhere, whether they're watch… | [iOS, iPadOS, macOS, tvOS, visionOS] |
 | [ShazamKit](shazamkit.md) | ShazamKit supports audio recognition by matching an audio sample against the ShazamKit ca… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Sign in with Apple](sign-in-with-apple.md) | Sign in with Apple provides a fast, private way to sign into apps and websites, giving pe… | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |
 | [Siri](siri.md) | People use Siri to help them with the things they need to find, know, or do every day. | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |

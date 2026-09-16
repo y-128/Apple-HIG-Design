@@ -1,10 +1,10 @@
 # components/navigation-and-search
 
-移動と検索の部品（タブバー、サイドバー、検索フィールド）。
+Components for navigation and search: tab bars, sidebars, search fields.
 
-収録 5件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+5 topics. See the [master index](../../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Path controls](path-controls.md) | A path control shows the file system path of a selected file or folder. | [macOS] |
 | [Search fields](search-fields.md) | A search field lets people search a collection of content for specific terms they enter. | [iOS, iPadOS, macOS, tvOS, visionOS, watchOS] |

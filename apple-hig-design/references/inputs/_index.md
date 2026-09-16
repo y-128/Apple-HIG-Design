@@ -1,10 +1,10 @@
 # inputs
 
-ジェスチャ、キーボード、Digital Crown、視線など入力手段ごとの設計。
+Design guidance for each input method people use to interact with your app: gestures, keyboard, Digital Crown, eye tracking, and more.
 
-収録 13件。各トピックには日本語版 `<slug>.ja.md` を併置してある。
+13 topics. See the [master index](../INDEX.md) for the full 158-topic list across all folders.
 
-| トピック | 概要 | 対象プラットフォーム |
+| Topic | Summary | Platforms |
 |---|---|---|
 | [Action button](action-button.md) | The Action button gives people quick access to their favorite features on supported iPhon… | [iOS, watchOS] |
 | [Apple Pencil and Scribble](apple-pencil-and-scribble.md) | Apple Pencil helps make drawing, handwriting, and marking effortless and natural, in addi… | [iPadOS] |
