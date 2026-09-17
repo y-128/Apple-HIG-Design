@@ -1,0 +1,12 @@
+{
+  "name": "apple-hig-design",
+  "description": "A reference covering all 158 topics in Apple's Human Interface Guidelines (HIG), with Apple's exact wording and numbers, plus web translation notes for every topic.",
+  "version": "1.0.0",
+  "author": {
+    "name": "y-128"
+  },
+  "homepage": "https://github.com/y-128/Apple-HIG-Design",
+  "repository": "https://github.com/y-128/Apple-HIG-Design",
+  "license": "MIT",
+  "keywords": ["apple", "hig", "human-interface-guidelines", "design", "ui", "ios", "macos", "visionos", "accessibility"]
+}

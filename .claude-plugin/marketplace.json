@@ -1,0 +1,19 @@
+{
+  "name": "apple-hig-design",
+  "owner": {
+    "name": "y-128"
+  },
+  "description": "Apple Human Interface Guidelines reference skill for Claude Code.",
+  "plugins": [
+    {
+      "name": "apple-hig-design",
+      "source": "./",
+      "description": "A reference covering all 158 topics in Apple's Human Interface Guidelines (HIG), with Apple's exact wording and numbers, plus web translation notes for every topic.",
+      "version": "1.0.0",
+      "author": {
+        "name": "y-128"
+      },
+      "category": "design"
+    }
+  ]
+}

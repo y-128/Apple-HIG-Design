@@ -32,24 +32,28 @@ Apple-HIG-Design/                     # Repository root
 ├── README.md / README.ja.md          # This file (English / Japanese)
 ├── NOTICE.md / NOTICE.ja.md          # Rights and licensing. Read before forking or redistributing.
 ├── LICENSE                           # MIT license for the original work
-└── apple-hig-design/                 # The skill itself. This folder goes into ~/.claude/skills/
-    ├── SKILL.md                      # Router file. Claude reads this first.
-    └── references/
-        ├── INDEX.md                # Index of all 158 topics
-        ├── getting-started/        #   9 files  Platform-specific starting points
-        ├── foundations/            #  18 files  Typography, color, layout, accessibility, etc.
-        ├── patterns/               #  25 files  Design patterns: modals, search, onboarding, etc.
-        ├── inputs/                 #  13 files  Gestures, keyboard, Digital Crown, and other input
-        ├── technologies/           #  29 files  Apple Pay, HealthKit, SharePlay, and other integrations
-        └── components/             #  64 files  UI components, split into 8 subfolders
-            ├── content/                       #  4
-            ├── layout-and-organization/       # 10
-            ├── menus-and-actions/             # 12
-            ├── navigation-and-search/         #  5
-            ├── presentation/                  #  8
-            ├── selection-and-input/           # 11
-            ├── status/                        #  4
-            └── system-experiences/            # 10
+├── .claude-plugin/
+│   ├── marketplace.json              # Lets Claude Code add this repository as a plugin marketplace
+│   └── plugin.json                   # Plugin manifest
+└── skills/
+    └── apple-hig-design/             # The skill itself
+        ├── SKILL.md                  # Router file. Claude reads this first.
+        └── references/
+            ├── INDEX.md            # Index of all 158 topics
+            ├── getting-started/    #   9 files  Platform-specific starting points
+            ├── foundations/        #  18 files  Typography, color, layout, accessibility, etc.
+            ├── patterns/           #  25 files  Design patterns: modals, search, onboarding, etc.
+            ├── inputs/             #  13 files  Gestures, keyboard, Digital Crown, and other input
+            ├── technologies/       #  29 files  Apple Pay, HealthKit, SharePlay, and other integrations
+            └── components/         #  64 files  UI components, split into 8 subfolders
+                ├── content/                       #  4
+                ├── layout-and-organization/       # 10
+                ├── menus-and-actions/             # 12
+                ├── navigation-and-search/         #  5
+                ├── presentation/                  #  8
+                ├── selection-and-input/           # 11
+                ├── status/                        #  4
+                └── system-experiences/            # 10
 ```
 
 That's 9 + 18 + 25 + 13 + 29 + 64 = 158 topics in total.
@@ -70,9 +74,43 @@ Note on language: the reference files under `references/` are written in English
 ## Requirements
 
 - Claude Code installed and working.
-- `git`, if you want to install by cloning. Not required if you download the files another way.
+- `git`, only if you use the manual installation. Not required for the plugin installation.
 
 ## Installation
+
+### Option 1: Plugin marketplace (recommended)
+
+This repository is a Claude Code plugin marketplace. Run these two commands inside Claude Code:
+
+```
+/plugin marketplace add y-128/Apple-HIG-Design
+/plugin install apple-hig-design@apple-hig-design
+```
+
+The first command registers this repository as a marketplace. The second installs the `apple-hig-design` plugin from it (the format is `plugin-name@marketplace-name`, and both happen to be `apple-hig-design`).
+
+The same can be done from a terminal:
+
+```bash
+claude plugin marketplace add y-128/Apple-HIG-Design
+claude plugin install apple-hig-design@apple-hig-design
+```
+
+Restart Claude Code, or start a new session, after installing.
+
+To get later updates:
+
+```
+/plugin marketplace update apple-hig-design
+```
+
+To uninstall:
+
+```
+/plugin uninstall apple-hig-design@apple-hig-design
+```
+
+### Option 2: Manual installation
 
 1. Clone the repository somewhere on your machine:
 
@@ -82,20 +120,20 @@ Note on language: the reference files under `references/` are written in English
    mkdir -p ~/.claude/skills
    ```
 
-   This creates a folder named `Apple-HIG-Design` (the repository root). Inside it, the `apple-hig-design` folder is the skill itself and directly contains `SKILL.md`. The `cd` command moves you into the repository root, and `mkdir -p` creates the skills directory if it does not exist yet.
+   This creates a folder named `Apple-HIG-Design` (the repository root). Inside it, the `skills/apple-hig-design` folder is the skill itself and directly contains `SKILL.md`. The `cd` command moves you into the repository root, and `mkdir -p` creates the skills directory if it does not exist yet.
 
 2. Link the skill into Claude Code's skills directory. Two options:
 
    **Option A: symlink** (keeps the skill in sync if you later `git pull`)
 
    ```bash
-   ln -s "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   ln -s "$(pwd)/skills/apple-hig-design" ~/.claude/skills/apple-hig-design
    ```
 
    **Option B: copy** (no symlink, but you won't get updates automatically)
 
    ```bash
-   cp -R "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   cp -R "$(pwd)/skills/apple-hig-design" ~/.claude/skills/apple-hig-design
    ```
 
    For a project-local install instead of a global one, use `.claude/skills/apple-hig-design` inside your project's own directory instead of `~/.claude/skills/apple-hig-design`.
@@ -106,9 +144,11 @@ Note on language: the reference files under `references/` are written in English
    ls ~/.claude/skills/apple-hig-design/SKILL.md
    ```
 
-   If this reports "No such file or directory," you linked one directory level too high or too low. Check whether `~/.claude/skills/apple-hig-design` itself contains `SKILL.md`, or whether you linked the repository root (`Apple-HIG-Design`) instead of the `apple-hig-design` folder inside it.
+   If this reports "No such file or directory," you linked one directory level too high or too low. Check whether `~/.claude/skills/apple-hig-design` itself contains `SKILL.md`, or whether you linked the repository root (`Apple-HIG-Design`) or the `skills` folder instead of `skills/apple-hig-design`.
 
 4. Restart Claude Code, or start a new session. Skills are picked up at session start, so a running session won't see a skill you just installed.
+
+Do not use both options at the same time; the skill would be loaded twice.
 
 ## Usage
 

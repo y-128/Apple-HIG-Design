@@ -32,24 +32,28 @@ Apple-HIG-Design/                     # リポジトリのルート
 ├── README.md / README.ja.md          # この文書（英語版 / 日本語版）
 ├── NOTICE.md / NOTICE.ja.md          # 権利関係。フォークや再配布の前に読んでください
 ├── LICENSE                           # 原著作物の MIT ライセンス
-└── apple-hig-design/                 # スキル本体。このフォルダを ~/.claude/skills/ に置きます
-    ├── SKILL.md                      # ルーターファイル。Claude はまずこれを読みます
-    └── references/
-        ├── INDEX.md                # 全158トピックの索引
-        ├── getting-started/        #   9件  プラットフォーム別の設計入門
-        ├── foundations/            #  18件  タイポグラフィ、カラー、レイアウト、アクセシビリティ等
-        ├── patterns/               #  25件  モーダル、検索、オンボーディング等の設計パターン
-        ├── inputs/                 #  13件  ジェスチャ、キーボード、Digital Crown 等の入力
-        ├── technologies/           #  29件  Apple Pay、HealthKit、SharePlay 等の技術連携
-        └── components/             #  64件  UI 部品。8つのサブフォルダに分かれています
-            ├── content/                       #  4件
-            ├── layout-and-organization/       # 10件
-            ├── menus-and-actions/             # 12件
-            ├── navigation-and-search/         #  5件
-            ├── presentation/                  #  8件
-            ├── selection-and-input/           # 11件
-            ├── status/                        #  4件
-            └── system-experiences/            # 10件
+├── .claude-plugin/
+│   ├── marketplace.json              # このリポジトリをプラグインマーケットプレイスとして登録するための設定
+│   └── plugin.json                   # プラグインの設定
+└── skills/
+    └── apple-hig-design/             # スキル本体
+        ├── SKILL.md                  # ルーターファイル。Claude はまずこれを読みます
+        └── references/
+            ├── INDEX.md            # 全158トピックの索引
+            ├── getting-started/    #   9件  プラットフォーム別の設計入門
+            ├── foundations/        #  18件  タイポグラフィ、カラー、レイアウト、アクセシビリティ等
+            ├── patterns/           #  25件  モーダル、検索、オンボーディング等の設計パターン
+            ├── inputs/             #  13件  ジェスチャ、キーボード、Digital Crown 等の入力
+            ├── technologies/       #  29件  Apple Pay、HealthKit、SharePlay 等の技術連携
+            └── components/         #  64件  UI 部品。8つのサブフォルダに分かれています
+                ├── content/                       #  4件
+                ├── layout-and-organization/       # 10件
+                ├── menus-and-actions/             # 12件
+                ├── navigation-and-search/         #  5件
+                ├── presentation/                  #  8件
+                ├── selection-and-input/           # 11件
+                ├── status/                        #  4件
+                └── system-experiences/            # 10件
 ```
 
 合計は 9 + 18 + 25 + 13 + 29 + 64 = 158 トピックです。
@@ -70,9 +74,43 @@ Apple-HIG-Design/                     # リポジトリのルート
 ## 必要な環境
 
 - Claude Code がインストールされ、動作していること。
-- `git`。クローンでインストールする場合に必要です。別の方法でファイルを取得する場合は不要です。
+- `git`。手動インストールの場合のみ必要です。プラグインとしてインストールする場合は不要です。
 
 ## 導入手順
+
+### 方法1: プラグインマーケットプレイス（推奨）
+
+このリポジトリは Claude Code のプラグインマーケットプレイスになっています。Claude Code の中で次の2つのコマンドを実行してください。
+
+```
+/plugin marketplace add y-128/Apple-HIG-Design
+/plugin install apple-hig-design@apple-hig-design
+```
+
+1つ目のコマンドでこのリポジトリをマーケットプレイスとして登録し、2つ目でそこから `apple-hig-design` プラグインをインストールします。書式は `プラグイン名@マーケットプレイス名` で、今回はどちらも `apple-hig-design` です。
+
+ターミナルからも同じことができます。
+
+```bash
+claude plugin marketplace add y-128/Apple-HIG-Design
+claude plugin install apple-hig-design@apple-hig-design
+```
+
+インストール後は Claude Code を再起動するか、新しいセッションを開始してください。
+
+更新を取り込むには次を実行します。
+
+```
+/plugin marketplace update apple-hig-design
+```
+
+アンインストールするには次を実行します。
+
+```
+/plugin uninstall apple-hig-design@apple-hig-design
+```
+
+### 方法2: 手動インストール
 
 1. リポジトリを手元にクローンします。
 
@@ -82,20 +120,20 @@ Apple-HIG-Design/                     # リポジトリのルート
    mkdir -p ~/.claude/skills
    ```
 
-   このコマンドで `Apple-HIG-Design` というフォルダ（リポジトリのルート）が作られます。その中の `apple-hig-design` フォルダがスキル本体で、`SKILL.md` を直接含んでいます。`cd` でリポジトリのルートに移動し、`mkdir -p` でスキル用のフォルダがまだなければ作成します。
+   このコマンドで `Apple-HIG-Design` というフォルダ（リポジトリのルート）が作られます。その中の `skills/apple-hig-design` フォルダがスキル本体で、`SKILL.md` を直接含んでいます。`cd` でリポジトリのルートに移動し、`mkdir -p` でスキル用のフォルダがまだなければ作成します。
 
 2. スキルを Claude Code のスキルディレクトリにリンクします。2つの方法があります。
 
    **方法A: シンボリックリンク**(`git pull` で更新した際にも反映されます)
 
    ```bash
-   ln -s "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   ln -s "$(pwd)/skills/apple-hig-design" ~/.claude/skills/apple-hig-design
    ```
 
    **方法B: コピー**(シンボリックリンクを使いたくない場合。ただし更新は自動反映されません)
 
    ```bash
-   cp -R "$(pwd)/apple-hig-design" ~/.claude/skills/apple-hig-design
+   cp -R "$(pwd)/skills/apple-hig-design" ~/.claude/skills/apple-hig-design
    ```
 
    グローバルではなくプロジェクト単位で導入したい場合は、`~/.claude/skills/apple-hig-design` の代わりに、プロジェクト内の `.claude/skills/apple-hig-design` を使ってください。
@@ -106,9 +144,11 @@ Apple-HIG-Design/                     # リポジトリのルート
    ls ~/.claude/skills/apple-hig-design/SKILL.md
    ```
 
-   「No such file or directory」と表示された場合、リンクの階層が1段階ずれています。`~/.claude/skills/apple-hig-design` 自体に `SKILL.md` があるか、それとも `apple-hig-design` フォルダではなくリポジトリのルート（`Apple-HIG-Design`）をリンクしてしまっていないかを確認してください。
+   「No such file or directory」と表示された場合、リンクの階層が1段階ずれています。`~/.claude/skills/apple-hig-design` 自体に `SKILL.md` があるか、それとも `skills/apple-hig-design` ではなくリポジトリのルート（`Apple-HIG-Design`）や `skills` フォルダをリンクしてしまっていないかを確認してください。
 
 4. Claude Code を再起動するか、新しいセッションを開始してください。スキルはセッション開始時に読み込まれるため、起動中のセッションでは今インストールしたスキルは認識されません。
+
+方法1と方法2を同時に使わないでください。スキルが二重に読み込まれます。
 
 ## 使い方
 
